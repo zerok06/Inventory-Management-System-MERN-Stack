@@ -6,22 +6,21 @@ const analyticsRoutes = express.Router();
 
 analyticsRoutes.get("/expiring", async (req, res) => {
   try {
-    const { months = 1 } = req.query; // Default to 1 month if not specified
+    const { months = 1 } = req.query;  
     const expiringProducts = await getExpiringProducts(parseInt(months));
     res.status(200).json(expiringProducts);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 });
-
-// Function to get expiring products
+ 
 const getExpiringProducts = async (months) => {
   const currentDate = new Date();
   const expirationDate = new Date(currentDate);
   expirationDate.setMonth(expirationDate.getMonth() + months);
 
   const expiringProducts = await ProductModel.find({
-    dateOfPurchase: { $lte: expirationDate }, // Products purchased before expirationDate
+    dateOfPurchase: { $lte: expirationDate }, 
   })
     .populate("createdBy")
     .populate({
@@ -30,7 +29,7 @@ const getExpiringProducts = async (months) => {
         path: "location",
       },
     })
-    .populate("manufacturer"); // Populate the manufacturer field if needed
+    .populate("manufacturer"); 
 
   return expiringProducts;
 };
@@ -93,8 +92,7 @@ const getWarrantyStatus = async () => {
 
   return { title: "Warranty", labels, data };
 };
-
-// Function to get product status
+ 
 const getProductStatus = async () => {
   const result = await HistoryModel.aggregate([
     {
