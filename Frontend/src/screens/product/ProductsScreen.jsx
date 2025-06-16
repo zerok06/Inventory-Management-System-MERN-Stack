@@ -55,9 +55,9 @@ function ProductsScreen() {
   return (
     <div className="m-5">
       <div>
-        <h1 className="text-3xl font-semibold text-neutral-900">Products</h1>
+        <h1 className="text-3xl font-semibold text-neutral-900">Productos</h1>
         <p className="text-lg text-neutral-600">
-          Here are the products created by you!
+          Aquí están los productos creados por ti.
         </p>
       </div>
       <br />
@@ -66,7 +66,7 @@ function ProductsScreen() {
           <input
             type="text"
             className="outline-none px-3 py-1 border-neutral-500 border-2 rounded-md text-lg"
-            placeholder="Search products"
+            placeholder="Buscar productos"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
@@ -81,7 +81,7 @@ function ProductsScreen() {
           }
           to={"new"}
         >
-          Create Product
+          Crear Producto
         </NavLink>
       </div>
       <br />
@@ -91,16 +91,16 @@ function ProductsScreen() {
           <table className="table-auto w-full border-collapse">
             <thead className="border-b text-left">
               <tr>
-                <th className="px-4 py-2">DETAILS</th>
-                <th className="px-4 py-2">SERIAL NUMBER</th>
-                <th className="px-4 py-2">USED BY</th>
-                <th className="px-4 py-2">isPart</th>
-                <th className="px-4 py-2">RACKMOUNTABLE</th>
-                <th className="px-4 py-2">DATE OF PURCHASE</th>
-                <th className="px-4 py-2">MODEL</th>
-                <th className="px-4 py-2">WARRANTY</th>
-                <th className="px-4 py-2">HISTORY</th>
-                <th className="px-4 py-2">ACTION</th>
+                <th className="px-4 py-2">DETALLES</th>
+                <th className="px-4 py-2">NÚMERO DE SERIE</th>
+                <th className="px-4 py-2">USADO POR</th>
+                <th className="px-4 py-2">¿Es Parte?</th>
+                <th className="px-4 py-2">¿Rackeable?</th>
+                <th className="px-4 py-2">FECHA DE COMPRA</th>
+                <th className="px-4 py-2">MODELO</th>
+                <th className="px-4 py-2">GARANTÍA</th>
+                <th className="px-4 py-2">HISTORIAL</th>
+                <th className="px-4 py-2">ACCIÓN</th>
               </tr>
             </thead>
             <tbody>
@@ -132,7 +132,7 @@ function ProductsScreen() {
                 value={itemsPerPage}
                 onChange={(e) => setItemsPerPage(e.target.value)}
               />
-              <h5>Per Page</h5>
+              <h5>Por Página</h5>
             </div>
             <div className="flex items-center gap-4">
               <button
@@ -141,7 +141,7 @@ function ProductsScreen() {
                 className="flex gap-2 items-center border rounded-md py-1 text-lg font-semibold px-3 hover:bg-teal-50 hover:text-teal-700 text-center"
               >
                 <IoIosArrowBack />
-                <span>Prev</span>
+                <span>Anterior</span>
               </button>
               <input
                 type="number"
@@ -155,10 +155,10 @@ function ProductsScreen() {
                 disabled={currentPage === totalPages}
                 className="flex gap-2 items-center border rounded-md py-1 text-lg font-semibold px-3 hover:bg-teal-50 hover:text-teal-700 text-center"
               >
-                <span>Next</span>
+                <span>Siguiente</span>
                 <IoIosArrowForward />
               </button>
-              <h6>Total {totalPages} pages</h6>
+              <h6>Total {totalPages} páginas</h6>
             </div>
           </div>
         </div>
@@ -212,13 +212,13 @@ export function ProductRow({ product, index, currentPage, itemsPerPage }) {
           to={`history/${product._id}`}
           className=" px-4 py-1 bg-neutral-800 text-slate-100 text-sm rounded-md hover:bg-neutral-600 hover:scale-95 transition-transform"
         >
-          View
+          Ver
         </Link>
       </td>
       <td className="px-4 py-2 text-neutral-700 font-semibold text-sm">
         <NavLink
-        
-          to={user._id !== product.createdBy? "":`edit/${product._id}`}
+
+          to={user._id !== product.createdBy ? "" : `edit/${product._id}`}
           className=" px-4 py-1 bg-neutral-800 text-slate-100 text-sm rounded-md hover:bg-neutral-600 hover:scale-95 transition-transform"
         >
           {user._id === product.createdBy ? "Edit" : "Action Not allowed"}
@@ -229,4 +229,3 @@ export function ProductRow({ product, index, currentPage, itemsPerPage }) {
 }
 
 export default ProductsScreen;
- 

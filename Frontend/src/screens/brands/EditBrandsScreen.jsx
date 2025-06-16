@@ -46,7 +46,7 @@ function EditBrandsScreen() {
       setError("");
       setUploading(true);
 
-      const {} = await axios.patch(
+      const { } = await axios.patch(
         `${SERVER_URL}/api/v1/brands/${params.id}`,
         data,
         {
@@ -74,7 +74,7 @@ function EditBrandsScreen() {
         <ShowErrorMessage
           children={
             <span className="underline cursor-pointer" onClick={getDataFromApi}>
-              reload
+              Recargar
             </span>
           }
         />
@@ -83,9 +83,9 @@ function EditBrandsScreen() {
         <ShowSuccessMesasge
           children={
             <p>
-              Updated Successfullly{" "}
+              Actualizado con éxito{" "}
               <Link className="underline" to={"/"} replace={true}>
-                goto Home
+                Ir a Inicio
               </Link>
             </p>
           }
@@ -104,7 +104,7 @@ function EditBrandsScreen() {
                 htmlFor="name"
                 className="block text-gray-700 text-sm font-bold mb-2"
               >
-                Name
+                Nombre
               </label>
               <input
                 type="text"
@@ -120,7 +120,7 @@ function EditBrandsScreen() {
                 htmlFor="desc"
                 className="block text-gray-700 text-sm font-bold mb-2"
               >
-                Description
+                Descripción
               </label>
               <input
                 type="text"
@@ -138,10 +138,10 @@ function EditBrandsScreen() {
                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               >
                 {uploading
-                  ? "Uploading"
+                  ? "Subiendo..."
                   : success
-                  ? "Updated successfully"
-                  : "Update"}
+                    ? "Actualizado con éxito"
+                    : "Actualizar"}
               </button>
             </div>
           </form>

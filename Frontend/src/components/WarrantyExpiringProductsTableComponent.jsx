@@ -38,13 +38,13 @@ function WarrantyExpiringProductsTablesComponent({ uid }) {
   return (
     <div className="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
       {isLoading ? (
-        <div>Loading...</div>
+        <div>Cargando...</div>
       ) : isError ? (
         <div>Error: {isError}</div>
       ) : inventoryData.length === 0 ? (
         <div className="flex items-center justify-center">
           <img src={EmptyData} alt="Empty Data" />
-          <h3>No data available</h3>
+          <h3>Datos no encontrados</h3>
         </div>
       ) : (
         <div className="inline-block min-w-full shadow-md rounded-lg overflow-hidden">
@@ -52,19 +52,19 @@ function WarrantyExpiringProductsTablesComponent({ uid }) {
             <thead>
               <tr>
                 <th className="px-5 py-3 border-b-2 border-white bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
-                  Product
+                  Producto
                 </th>
                 <th className="px-5 py-3 border-b-2 border-white bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
-                  Serial Number
+                  Número de serie
                 </th>
                 <th className="px-5 py-3 border-b-2 border-white bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
-                  Warranty Months / Purchase Date
+                  Meses de garantía / Fecha de compra
                 </th>
                 <th className="px-5 py-3 border-b-2 border-white bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
-                  Status
+                  Estado
                 </th>
                 <th className="px-5 py-3 border-b-2 border-white bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
-                  Action
+                  Acción
                 </th>
               </tr>
             </thead>
@@ -85,7 +85,7 @@ function WarrantyExpiringProductsTablesComponent({ uid }) {
                   </td>
                   <td className="px-5 py-5 border-b border-white text-sm">
                     <Link to={`/products/history/${item._id}`} className="text-blue-500 hover:underline mr-2">
-                      View
+                      Ver
                     </Link>
                   </td>
                 </tr>

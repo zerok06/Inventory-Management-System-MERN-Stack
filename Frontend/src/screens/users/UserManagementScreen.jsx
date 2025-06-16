@@ -61,17 +61,17 @@ function UserManagementScreen() {
     <div className="m-5">
       <div>
         <h1 className="text-3xl font-semibold text-neutral-900">
-          User Management
+          Administrador de Usuarios
         </h1>
         <p className="text-lg text-neutral-600">
-          Here you can modify the privilege of a user [admin/user]
+          Aquí puedes modificar los privilegios de un usuario [admin/user]
         </p>
       </div>
       <br />
 
       {error && (
         <ShowErrorMessage
-          children={<span className="underline cursor-pointer">reload</span>}
+          children={<span className="underline cursor-pointer">recargar</span>}
           message={error}
         />
       )}
@@ -81,7 +81,7 @@ function UserManagementScreen() {
           <input
             type="text"
             className="outline-none px-3 py-1 border-neutral-500 border-2 rounded-md text-lg"
-            placeholder="Search users"
+            placeholder="Buscar usuarios"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
@@ -90,9 +90,9 @@ function UserManagementScreen() {
             value={roleFilter}
             onChange={(e) => setRoleFilter(e.target.value)}
           >
-            <option value="">None</option>
-            <option value="user">User</option>
-            <option value="admin">Admin</option>
+            <option value="">Ninguno</option>
+            <option value="user">Usuario</option>
+            <option value="admin">Administrador</option>
           </select>
         </div>
       </div>
@@ -102,11 +102,11 @@ function UserManagementScreen() {
           <table className="table-auto w-full border-collapse">
             <thead className="border-b text-left">
               <tr>
-                <th className="px-4 py-2">Name</th>
-                <th className="px-4 py-2">Email</th>
-                <th className="px-4 py-2">Role</th>
+                <th className="px-4 py-2">Nombre</th>
+                <th className="px-4 py-2">Correo Electrónico</th>
+                <th className="px-4 py-2">Rol</th>
                 {user && user.role === "admin" && (
-                  <th className="px-4 py-2">Actions</th>
+                  <th className="px-4 py-2">Acciones</th>
                 )}
               </tr>
             </thead>
@@ -133,7 +133,7 @@ function UserManagementScreen() {
                 value={itemsPerPage}
                 onChange={(e) => setItemsPerPage(e.target.value)}
               />
-              <h5>Per Page</h5>
+              <h5>Por Página</h5>
             </div>
             <div className="flex items-center gap-4">
               <button
@@ -142,7 +142,7 @@ function UserManagementScreen() {
                 className="flex gap-2 items-center border rounded-md py-1 text-lg font-semibold px-3 hover:bg-teal-50 hover:text-teal-700 text-center"
               >
                 <IoIosArrowBack />
-                <span>Prev</span>
+                <span>Anterior</span>
               </button>
               <input
                 type="number"
@@ -156,10 +156,10 @@ function UserManagementScreen() {
                 disabled={currentPage === totalPages}
                 className="flex gap-2 items-center border rounded-md py-1 text-lg font-semibold px-3 hover:bg-teal-50 hover:text-teal-700 text-center"
               >
-                <span>Next</span>
+                <span>Siguiente</span>
                 <IoIosArrowForward />
               </button>
-              <h6>Total {totalPages} pages</h6>
+              <h6>Total {totalPages} páginas</h6>
             </div>
           </div>
         </div>

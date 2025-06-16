@@ -13,7 +13,7 @@ function ManageUserTableRow({ user, role }) {
         `${SERVER_URL}/api/v1/users/chage-role`,
         {
           targetUserId: user._id,
-          role: userRole==="user" ? "admin":"user",
+          role: userRole === "user" ? "admin" : "user",
         },
         {
           withCredentials: "include",
@@ -32,7 +32,7 @@ function ManageUserTableRow({ user, role }) {
     }
   }
   async function changeRole() {
-   // setUserRole((s) => (s === "admin" ? "user" : "admin"));
+    // setUserRole((s) => (s === "admin" ? "user" : "admin"));
     await changeRoleAPicall();
   }
   return (
@@ -41,11 +41,10 @@ function ManageUserTableRow({ user, role }) {
       <td className="px-4 py-3">{user.email}</td>
       <td className={`px-4 py-3`}>
         <span
-          className={`${
-            userRole === "admin"
+          className={`${userRole === "admin"
               ? "bg-red-200 rounded-md border-red-600 border"
               : "bg-teal-100 rounded-md border-teal-900 border"
-          } px-3 py-1 w-min ${isLoading && "animate-pulse"} `}
+            } px-3 py-1 w-min ${isLoading && "animate-pulse"} `}
         >
           {userRole}
         </span>
@@ -57,8 +56,8 @@ function ManageUserTableRow({ user, role }) {
             onClick={changeRole}
             className="underline text-blue-500 flex items-center gap-3"
           >
-            Change Role to{" "}
-            <span>{userRole === "admin" ? "user" : "admin"}</span>
+            Cambiar rol a{" "}
+            <span>{userRole === "admin" ? "usuario" : "administrador"}</span>
             {isLoading && (
               <div className="w-5 h-5 border-2 border-b-black border-t-black border-r-black rounded-full animate-spin" />
             )}

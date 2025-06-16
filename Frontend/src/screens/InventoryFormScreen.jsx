@@ -89,12 +89,12 @@ function InventoryForm() {
       )}
       {isSuccess && (
         <div className="mb-3 px-3 py-1 border-2 border-green-600 bg-green-100 rounded-md text-green-900">
-          {"New Product added to inventory successfully"}
+          {"Nuevo producto agregado con éxito"}
         </div>
       )}
       <div className="mb-4">
         <label htmlFor="title" className="block mb-2">
-          Title
+          Título
         </label>
         <input
           type="text"
@@ -108,7 +108,7 @@ function InventoryForm() {
       </div>
       <div className="mb-4">
         <label htmlFor="description" className="block mb-2">
-          Description
+          Descripción
         </label>
         <textarea
           id="description"
@@ -121,7 +121,7 @@ function InventoryForm() {
       </div>
       <div className="mb-4">
         <label htmlFor="serialNo" className="block mb-2">
-          Serial Number
+          Número de serie
         </label>
         <input
           type="text"
@@ -135,7 +135,7 @@ function InventoryForm() {
       </div>
       <div className="mb-4">
         <label htmlFor="manufacturer" className="block mb-2">
-          Manufacturer
+          Fabricante
         </label>
         <input
           type="text"
@@ -149,7 +149,7 @@ function InventoryForm() {
       </div>
       <div className="mb-4">
         <label htmlFor="model" className="block mb-2">
-          Model
+          Modelo
         </label>
         <input
           type="text"
@@ -163,7 +163,7 @@ function InventoryForm() {
       </div>
       <div className="mb-4">
         <label htmlFor="dateOfPurchase" className="block mb-2">
-          Date of Purchase
+          Fecha de compra
         </label>
         <input
           type="date"
@@ -177,7 +177,7 @@ function InventoryForm() {
       </div>
       <div className="mb-4">
         <label htmlFor="warrantyMonths" className="block mb-2">
-          Warranty Months
+          Meses de garantía
         </label>
         <input
           type="number"
@@ -191,7 +191,7 @@ function InventoryForm() {
       </div>
       <div className="mb-4">
         <label htmlFor="status" className="block mb-2">
-          Status
+          Estado
         </label>
         <select
           id="status"
@@ -201,15 +201,15 @@ function InventoryForm() {
           required
           className="border rounded px-4 py-2 w-full"
         >
-          <option value="none">None</option>
-          <option value="repair">Repair</option>
-          <option value="in use">In Use</option>
-          <option value="not in use">Not in Use</option>
+          <option value="none">Ninguno</option>
+          <option value="repair">Reparación</option>
+          <option value="in use">En uso</option>
+          <option value="not in use">No en uso</option>
         </select>
       </div>
       <div className="mb-4">
         <label htmlFor="user" className="block mb-2">
-          User
+          Usuario
         </label>
         <select
           id="user"
@@ -219,9 +219,9 @@ function InventoryForm() {
           required
           className="border rounded px-4 py-2 w-full"
         >
-          <option value="none">None</option>
-          <option value="Normal User">Normal User</option>
-          <option value="department">Department</option>
+          <option value="none">Ninguno</option>
+          <option value="Normal User">Usuario Normal</option>
+          <option value="department">Departamento</option>
           <option value="admin">Admin</option>
           <option value="administrator">Administrator</option>
         </select>

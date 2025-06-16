@@ -26,19 +26,19 @@ function SideNavbar() {
       { link: "", name: "Dashboard", icon: <IoMdHome />, end: true },
       {
         link: "/products/new",
-        name: "New Product",
+        name: "Nuevo Producto",
         icon: <AiFillProduct />,
         end: true,
       },
       {
         link: "/brands/new",
-        name: "New Brand",
+        name: "Nueva Marca",
         icon: <FaBlog />,
         end: true,
       },
       {
         link: "/locations/new",
-        name: "New Location",
+        name: "Nueva Ubicación",
         icon: <BiLocationPlus />,
         end: true,
       },
@@ -49,18 +49,18 @@ function SideNavbar() {
     links: [
       {
         link: "/products",
-        name: "Products",
+        name: "Productos",
         icon: <LuShoppingBag />,
         end: false,
       },
-      { link: "/brands", name: "Brands", icon: <SiBrandfolder />, end: false },
+      { link: "/brands", name: "Marcas", icon: <SiBrandfolder />, end: false },
       {
         link: "/locations",
-        name: "Locations",
+        name: "Ubicaciones",
         icon: <BiLocationPlus />,
         end: false,
       },
-      { link: "/users", name: "User Management", icon: <BiUser />, end: false },
+      { link: "/users", name: "Gestión de Usuarios", icon: <BiUser />, end: false },
     ],
   };
 
@@ -79,10 +79,9 @@ function SideNavbar() {
                 key={idx}
                 to={_link.link}
                 className={(prop) =>
-                  `${
-                    prop.isActive
-                      ? "text-teal-600 border-l-4 border-l-teal-600 rounded-sm bg-slate-50"
-                      : "hover:bg-slate-50 hover:text-teal-800"
+                  `${prop.isActive
+                    ? "text-teal-600 border-l-4 border-l-teal-600 rounded-sm bg-slate-50"
+                    : "hover:bg-slate-50 hover:text-teal-800"
                   } pl-6 py-2 font-semibold text-slate-700 flex items-center gap-3`
                 }
               >

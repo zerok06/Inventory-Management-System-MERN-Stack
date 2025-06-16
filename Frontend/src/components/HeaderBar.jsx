@@ -26,7 +26,7 @@ function HeaderBar({ user }) {
         <header className="bg-gray-800">
           <div className="px-6 py-3 bg-white shadow-md grid grid-cols-10 fixed top-0 right-0 left-0 z-10 items-center">
             <h1 className="text-xl font-semibold col-span-2">
-              Inventory Management
+              Modulo de Inventario
             </h1>
             <div className="col-span-6"></div>
             <div className="col-span-2 flex items-center justify-end">

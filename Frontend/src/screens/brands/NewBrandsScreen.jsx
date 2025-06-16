@@ -26,7 +26,7 @@ function NewBrandsScreen() {
       setError("");
       setUploading(true);
 
-      const {} = await axios.post(
+      const { } = await axios.post(
         `${SERVER_URL}/api/v1/brands/`,
         data,
         {
@@ -46,11 +46,11 @@ function NewBrandsScreen() {
   }
   return (
     <div className="p-5 w-full h-full">
-      <h1 className="text-2xl font-semibold">Add New Brand </h1>
+      <h1 className="text-2xl font-semibold">Agregar Nueva Marca</h1>
 
       {isError && (
         <ShowErrorMessage
-          children={<span className="underline cursor-pointer">reload</span>}
+          children={<span className="underline cursor-pointer">Recargar</span>}
         />
       )}
       {success && (
@@ -58,7 +58,7 @@ function NewBrandsScreen() {
           <br />
           <div className="mx-auto text-center border-teal-700 bg-teal-300 p-3 w-1/4 border-2 rounded-md">
             <p>
-              Updated Successfullly{" "}
+              Actualizado con éxito{" "}
               <Link className="underline" to={"/"} replace={true}>
                 goto Home
               </Link>
@@ -79,7 +79,7 @@ function NewBrandsScreen() {
               htmlFor="name"
               className="block text-gray-700 text-sm font-bold mb-2"
             >
-              Name
+              Nombre
             </label>
             <input
               type="text"
@@ -95,7 +95,7 @@ function NewBrandsScreen() {
               htmlFor="desc"
               className="block text-gray-700 text-sm font-bold mb-2"
             >
-              Description
+              Descripción
             </label>
             <input
               type="text"
@@ -112,7 +112,7 @@ function NewBrandsScreen() {
               type="submit"
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             >
-              {uploading ? "Uploading" : success ? "Create new one" : "Upload"}
+              {uploading ? "Subiendo..." : success ? "Crear uno nuevo" : "Subir"}
             </button>
           </div>
         </form>

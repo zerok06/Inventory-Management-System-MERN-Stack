@@ -53,7 +53,7 @@ function EditLocationScreen() {
       setError("");
       setUploading(true);
 
-      const {} = await axios.patch(
+      const { } = await axios.patch(
         `${SERVER_URL}/api/v1/location/${params.id}`,
         data,
         {
@@ -80,7 +80,7 @@ function EditLocationScreen() {
         <ShowErrorMessage
           children={
             <span className="underline cursor-pointer" onClick={getDataFromApi}>
-              reload
+              Recargar
             </span>
           }
         />
@@ -89,9 +89,9 @@ function EditLocationScreen() {
         <ShowSuccessMesasge
           children={
             <p>
-              Updated Successfullly{" "}
+              Actualizado con éxito{" "}
               <Link className="underline" to={"/"} replace={true}>
-                goto Home
+                Ir a Inicio
               </Link>
             </p>
           }
@@ -146,8 +146,8 @@ function EditLocationScreen() {
                 {uploading
                   ? "Uploading"
                   : success
-                  ? "Updated successfully"
-                  : "Update"}
+                    ? "Updated successfully"
+                    : "Update"}
               </button>
             </div>
           </form>

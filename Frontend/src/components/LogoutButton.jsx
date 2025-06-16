@@ -36,11 +36,10 @@ function LogoutButton() {
     <button
       onClick={handleLogout}
       // to={"/admin/settings"}
-      className={`${
-        isLoading && "animate-pulse"
-      } flex items-center justify-between px-4 border-t border-b hover:bg-red-700 bg-red-400 font-semibold   text-white py-2 `}
+      className={`${isLoading && "animate-pulse"
+        } flex items-center justify-between px-4 border-t border-b hover:bg-red-700 bg-red-400 font-semibold   text-white py-2 `}
     >
-      Log out{" "}
+      Cerrar sesión{" "}
       {isLoading ? (
         <span className="w-5 h-5 ">
           <LoadingIndicator />

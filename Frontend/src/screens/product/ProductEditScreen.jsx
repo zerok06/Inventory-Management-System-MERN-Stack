@@ -124,10 +124,10 @@ function ProductEditScreen() {
   return (
     <div className="m-5">
       <h1 className="text-3xl font-semibold text-neutral-900">
-        Edit Product
+        Editar Producto
       </h1>
       {isError && <div className="text-red-500">{isError}</div>}
-      {isSuccess && <div className="text-green-500">{"Updated successfully"}</div>}
+      {isSuccess && <div className="text-green-500">{"Actualizado con éxito"}</div>}
       <form onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
           <div>
@@ -135,7 +135,7 @@ function ProductEditScreen() {
               htmlFor="title"
               className="block text-lg font-semibold text-neutral-800 mb-1"
             >
-              Title
+              Título
             </label>
             <input
               type="text"
@@ -152,7 +152,7 @@ function ProductEditScreen() {
               htmlFor="description"
               className="block text-lg font-semibold text-neutral-800 mb-1"
             >
-              Description
+              Descripción
             </label>
             <input
               type="text"
@@ -169,7 +169,7 @@ function ProductEditScreen() {
               htmlFor="serialNo"
               className="block text-lg font-semibold text-neutral-800 mb-1"
             >
-              Serial Number
+              Número de Serie
             </label>
             <input
               type="text"
@@ -196,7 +196,7 @@ function ProductEditScreen() {
               className="border border-neutral-500 rounded-md px-3 py-2 w-full outline-none"
               required
             >
-              <option value={true}>Yes</option>
+              <option value={true}>Sí</option>
               <option value={false}>No</option>
             </select>
           </div>
@@ -205,7 +205,7 @@ function ProductEditScreen() {
               htmlFor="isPart"
               className="block text-lg font-semibold text-neutral-800 mb-1"
             >
-              Is Part
+              Es Parte
             </label>
             <select
               id="isPart"
@@ -215,7 +215,7 @@ function ProductEditScreen() {
               className="border border-neutral-500 rounded-md px-3 py-2 w-full outline-none"
               required
             >
-              <option value={true}>Yes</option>
+              <option value={true}>Sí</option>
               <option value={false}>No</option>
             </select>
           </div>
@@ -224,7 +224,7 @@ function ProductEditScreen() {
               htmlFor="manufacturer"
               className="block text-lg font-semibold text-neutral-800 mb-1"
             >
-              Manufacturer
+              Fabricante
             </label>
             <select
               type="text"
@@ -245,7 +245,7 @@ function ProductEditScreen() {
               htmlFor="location"
               className="block text-lg font-semibold text-neutral-800 mb-1"
             >
-              Location / Sector
+              Ubicación / Sector
             </label>
             <select
               type="text"
@@ -266,7 +266,7 @@ function ProductEditScreen() {
               htmlFor="model"
               className="block text-lg font-semibold text-neutral-800 mb-1"
             >
-              Model
+              Modelo
             </label>
             <input
               type="text"
@@ -283,7 +283,7 @@ function ProductEditScreen() {
               htmlFor="warrantyMonths"
               className="block text-lg font-semibold text-neutral-800 mb-1"
             >
-              Warranty Months
+              Meses de Garantía
             </label>
             <input
               type="number"
@@ -300,7 +300,7 @@ function ProductEditScreen() {
               htmlFor="user"
               className="block text-lg font-semibold text-neutral-800 mb-1"
             >
-              User
+              Usuario
             </label>
             <select
               id="user"
@@ -310,9 +310,9 @@ function ProductEditScreen() {
               className="border border-neutral-500 rounded-md px-3 py-2 w-full outline-none"
               required
             >
-              <option value="department">Department</option>
+              <option value="department">Departamento</option>
               <option value="admin">Admin</option>
-              <option value="normal user">Normal User</option>
+              <option value="normal user">Usuario Normal</option>
             </select>
           </div>
           <div>
@@ -320,7 +320,7 @@ function ProductEditScreen() {
               htmlFor="user"
               className="block text-lg font-semibold text-neutral-800 mb-1"
             >
-              Status
+              Estado
             </label>
             <select
               id="status"
@@ -330,9 +330,9 @@ function ProductEditScreen() {
               className="border border-neutral-500 rounded-md px-3 py-2 w-full outline-none"
               required
             >
-              <option value="repair">Repair</option>
-              <option value="not in use">Not In Use </option>
-              <option value="in use">In Use</option>
+              <option value="repair">Reparar</option>
+              <option value="not in use">No en Uso</option>
+              <option value="in use">En Uso </option>
             </select>
           </div>
           <div>
@@ -340,7 +340,7 @@ function ProductEditScreen() {
               htmlFor="dateOfPurchase"
               className="block text-lg font-semibold text-neutral-800 mb-1"
             >
-              Date of Purchase
+              Fecha de Compra
             </label>
             <input
               type="datetime-local"
@@ -358,7 +358,7 @@ function ProductEditScreen() {
           className="mt-4 px-4 py-2 bg-teal-500 text-white font-semibold rounded-md hover:bg-teal-600 transition duration-300"
           disabled={isLoading}
         >
-          {isLoading ? "Adding..." : "Update Product"}
+          {isLoading ? "Agregando..." : "Actualizar Producto"}
         </button>
       </form>
       <br />
@@ -366,7 +366,7 @@ function ProductEditScreen() {
         <ShowSuccessMesasge
           children={
             <div className="text-gray-900 text-lg">
-              {"Updated Successfully"}
+              {"Actualizado con éxito"}
             </div>
           }
         />

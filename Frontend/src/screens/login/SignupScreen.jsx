@@ -45,32 +45,32 @@ function SignupScreen() {
       <div className="flex flex-col overflow-hidden bg-white rounded-md shadow-lg max md:flex-row md:flex-1 lg:max-w-screen-md">
         <div className="p-4 py-6 text-white bg-blue-500 md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly">
           <div className="my-3 text-4xl font-bold tracking-wider text-center">
-            <a href="#">Inventory Management</a>
+            <a href="#">Modulo Inventario</a>
           </div>
           <p className="mt-6 font-normal text-center text-gray-300 md:mt-0">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
             eligendi perspiciatis, sapiente si.
           </p>
           <p className="flex flex-col items-center justify-center mt-10 text-center">
-            <span>Already have an account?</span>
+            <span>¿Ya tienes una cuenta?</span>
             <Link to={"/auth"} className="underline">
-              Get Started!
+              ¡Comienza ahora!
             </Link>
           </p>
           <p className="mt-6 text-sm text-center text-gray-300">
-            Read our{" "}
+            Lee nuestros{" "}
             <a href="#" className="underline">
-              terms
+              términos
             </a>{" "}
-            and{" "}
+            y{" "}
             <a href="#" className="underline">
-              conditions
+              condiciones de uso.
             </a>
           </p>
         </div>
         <div className="p-5 bg-white md:flex-1">
           <h3 className="my-4 text-2xl font-semibold text-gray-700">
-            Account Signup
+            Registro de Cuenta
           </h3>
           <form
             action="#"
@@ -79,7 +79,7 @@ function SignupScreen() {
           >
             <div className="flex flex-col space-y-1">
               <label for="name" className="text-sm font-semibold text-gray-500">
-                User Name
+                Nombre de Usuario
               </label>
               <input
                 type="name"
@@ -95,7 +95,7 @@ function SignupScreen() {
                 for="email"
                 className="text-sm font-semibold text-gray-500"
               >
-                Email address
+                Correo electronico
               </label>
               <input
                 type="email"
@@ -112,7 +112,7 @@ function SignupScreen() {
                   for="password"
                   className="text-sm font-semibold text-gray-500"
                 >
-                  Password
+                  Contraseña
                 </label>
               </div>
               <input
@@ -133,7 +133,7 @@ function SignupScreen() {
                 for="remember"
                 className="text-sm font-semibold text-gray-500"
               >
-                Remember me
+                Recordarme
               </label>
             </div>
             <div>
@@ -141,7 +141,7 @@ function SignupScreen() {
                 type="submit"
                 className="w-full px-4 py-2 text-lg font-semibold text-white transition-colors duration-300 bg-blue-500 rounded-md shadow hover:bg-blue-600 focus:outline-none focus:ring-blue-200 focus:ring-4"
               >
-                SignUp
+                Registrarse
               </button>
             </div>
           </form>

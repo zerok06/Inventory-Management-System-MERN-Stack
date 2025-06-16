@@ -51,7 +51,7 @@ function ProductInfoScreen() {
             <div className="mb-3 px-3 py-1 border-2 border-yellow-600 bg-yellow-100 rounded-md text-yellow-800">
               {isError}{" "}
               <span className="underline" onClick={getProductInfo}>
-                Click here to reload!
+                Click aquí para recargar
               </span>
             </div>
           </div>
@@ -61,7 +61,7 @@ function ProductInfoScreen() {
         <div className="min-h-screen flex items-center justify-center">
           <div className="flex flex-col gap-4">
             <div className="h-12  w-12 border-b-2 border-l-2 border-r-2 border-black border-t-white animate-spin rounded-full"></div>
-            <h1 className="font-semibold animate-pulse"> Loading</h1>
+            <h1 className="font-semibold animate-pulse"> Cargando</h1>
           </div>
         </div>
       )}
@@ -69,22 +69,22 @@ function ProductInfoScreen() {
         <div className="bg-white p-6 rounded shadow">
           <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
           <p className="text-gray-700 mb-2">{product.description}</p>
-          <p className="text-gray-700 mb-2">Serial No: {product.serialNo}</p>
+          <p className="text-gray-700 mb-2">No de Serie: {product.serialNo}</p>
           <p className="text-gray-700 mb-2">
-            Manufacturer: {product.manufacturer}
+            Fabricante: {product.manufacturer}
           </p>
-          <p className="text-gray-700 mb-2">Model: {product.model}</p>
+          <p className="text-gray-700 mb-2">Modelo: {product.model}</p>
           <p className="text-gray-700 mb-2">
-            Date of Purchase:{" "}
+            Fecha de Compra:{" "}
             {new Date(product.dateOfPurchase).toLocaleDateString()}
           </p>
           <p className="text-gray-700 mb-2">
-            Warranty Months: {product.warrantyMonths}
+            Meses de Garantía: {product.warrantyMonths}
           </p>
-          <p className="text-gray-700 mb-2">Status: {product.status}</p>
-          <p className="text-gray-700 mb-2">User: {product.user}</p>
+          <p className="text-gray-700 mb-2">Estado: {product.status}</p>
+          <p className="text-gray-700 mb-2">Usuario: {product.user}</p>
           <p className="text-gray-700 mb-2">
-            Created By: {product.createdBy.name}
+            Creado Por: {product.createdBy.name}
           </p>
           {/* Render other product information */}
         </div>

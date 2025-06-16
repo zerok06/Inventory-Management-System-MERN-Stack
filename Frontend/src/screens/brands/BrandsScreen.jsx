@@ -28,12 +28,12 @@ function BrandsScreen() {
   return (
     <div className="p-5 w-full h-full">
       <div className="flex justify-between items-center">
-        <h1 className="text-2xl font-semibold">All Brands</h1>
+        <h1 className="text-2xl font-semibold">Todas las Marcas</h1>
         <Link
           to={"new"}
           className="px-4 py-1 hover:bg-teal-600 hover:text-slate-50 font-semibold text-teal-600 bg-teal-50 border-2 border-teal-600 rounded-md"
         >
-          Add New Brand
+          Agregar Marca
         </Link>
       </div>
       <br />
@@ -42,7 +42,7 @@ function BrandsScreen() {
 
       {isError && (
         <ShowErrorMessage
-          children={<span className="underline cursor-pointer">reload</span>}
+          children={<span className="underline cursor-pointer">Recargar</span>}
         />
       )}
 
@@ -102,7 +102,7 @@ function LoactionCard({ data }) {
                     </h3>
                   </p>
                   <span className="line-clamp-1 px-3 py-1 bg-neutral-200 text-sm rounded-3xl text-teal-800">
-                    Created By
+                    Creado Por
                   </span>
                 </div>
                 <p className="text-gray-600 flex gap-2 items-center">
@@ -119,10 +119,10 @@ function LoactionCard({ data }) {
         to={`edit/${data._id}`}
         className="absolute top-2 right-2 z-10 bg-teal-100 px-3 py-1 rounded-sm font-semibold text-sm hover:bg-teal-900 hover:text-slate-200"
       >
-        Edit
+        Editar
       </NavLink>
     </div>
-  );  
+  );
 }
 
 export default BrandsScreen;

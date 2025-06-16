@@ -28,12 +28,12 @@ function LocationsScreen() {
   return (
     <div className="p-5 w-full h-full">
       <div className="flex justify-between items-center">
-        <h1 className="text-2xl font-semibold">All Locations</h1>
+        <h1 className="text-2xl font-semibold">Todas las Ubicaciones</h1>
         <Link
           to={"new"}
           className="px-4 py-1 hover:bg-teal-600 hover:text-slate-50 font-semibold text-teal-600 bg-teal-50 border-2 border-teal-600 rounded-md"
         >
-          Add New Location
+          Agregar Nueva Ubicación
         </Link>
       </div>
       <br />
@@ -42,7 +42,7 @@ function LocationsScreen() {
 
       {isError && (
         <ShowErrorMessage
-          children={<span className="underline cursor-pointer">reload</span>}
+          children={<span className="underline cursor-pointer">Recargar</span>}
         />
       )}
 
@@ -64,7 +64,7 @@ function LoactionCard({ data }) {
     <div className="bg-white border rounded-md shadow-teal-100  hover:shadow-md hover:shadow-teal-200 transition-transform shadow-sm p-6 relative">
       <h2 className="text-xl font-semibold">{data.name}</h2>
       <p className="mt-2 text-gray-600 line-clamp-2">{data.description}</p>
-  
+
       {data.editedBy ? (
         <>
           <hr className="my-4 border-gray-300" />
@@ -76,7 +76,7 @@ function LoactionCard({ data }) {
                   <h3 className="font-semibold line-clamp-1">{data.editedBy.name}</h3>
                 </p>
                 <span className="px-3 py-1 line-clamp-1 bg-neutral-200 text-sm rounded-3xl text-teal-800">
-                  Edited By
+                  Editado Por
                 </span>
               </div>
               <p className="text-gray-600 flex gap-2 items-center">
@@ -117,7 +117,7 @@ function LoactionCard({ data }) {
         to={`edit/${data._id}`}
         className="absolute top-2 right-2 z-10 bg-teal-100 px-3 py-1 rounded-sm font-semibold text-sm hover:bg-teal-900 hover:text-slate-200"
       >
-        Edit
+        Editar
       </NavLink>
     </div>
   );

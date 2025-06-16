@@ -98,7 +98,7 @@ function AddNewProductScreen() {
   return (
     <div className="m-5">
       <h1 className="text-3xl font-semibold text-neutral-900">
-        Add New Product
+        Agregar Nuevo Producto
       </h1>
       {error && <div className="text-red-500">{error}</div>}
       {successMessage && <div className="text-green-500">{successMessage}</div>}
@@ -109,7 +109,7 @@ function AddNewProductScreen() {
               htmlFor="title"
               className="block text-lg font-semibold text-neutral-800 mb-1"
             >
-              Title
+              Título
             </label>
             <input
               type="text"
@@ -126,7 +126,7 @@ function AddNewProductScreen() {
               htmlFor="description"
               className="block text-lg font-semibold text-neutral-800 mb-1"
             >
-              Description
+              Descripción
             </label>
             <input
               type="text"
@@ -143,7 +143,7 @@ function AddNewProductScreen() {
               htmlFor="serialNo"
               className="block text-lg font-semibold text-neutral-800 mb-1"
             >
-              Serial Number
+              Número de Serie
             </label>
             <input
               type="text"
@@ -189,7 +189,7 @@ function AddNewProductScreen() {
               className="border border-neutral-500 rounded-md px-3 py-2 w-full outline-none"
               required
             >
-              <option value={true}>Yes</option>
+              <option value={true}>Si</option>
               <option value={false}>No</option>
             </select>
           </div>
@@ -198,7 +198,7 @@ function AddNewProductScreen() {
               htmlFor="manufacturer"
               className="block text-lg font-semibold text-neutral-800 mb-1"
             >
-              Manufacturer
+              Fabricante
             </label>
             <select
               type="text"
@@ -219,7 +219,7 @@ function AddNewProductScreen() {
               htmlFor="location"
               className="block text-lg font-semibold text-neutral-800 mb-1"
             >
-              Location / Sector
+              Ubicación / Sector
             </label>
             <select
               type="text"
@@ -240,7 +240,7 @@ function AddNewProductScreen() {
               htmlFor="model"
               className="block text-lg font-semibold text-neutral-800 mb-1"
             >
-              Model
+              Modelo
             </label>
             <input
               type="text"
@@ -257,7 +257,7 @@ function AddNewProductScreen() {
               htmlFor="warrantyMonths"
               className="block text-lg font-semibold text-neutral-800 mb-1"
             >
-              Warranty Months
+              Meses de Garantía
             </label>
             <input
               type="number"
@@ -274,7 +274,7 @@ function AddNewProductScreen() {
               htmlFor="user"
               className="block text-lg font-semibold text-neutral-800 mb-1"
             >
-              User
+              Usuario
             </label>
             <select
               id="user"
@@ -284,9 +284,9 @@ function AddNewProductScreen() {
               className="border border-neutral-500 rounded-md px-3 py-2 w-full outline-none"
               required
             >
-              <option value="department">Department</option>
+              <option value="department">Departamento</option>
               <option value="admin">Admin</option>
-              <option value="normal user">Normal User</option>
+              <option value="normal user">Usuario Normal</option>
             </select>
           </div>
           <div>
@@ -304,9 +304,9 @@ function AddNewProductScreen() {
               className="border border-neutral-500 rounded-md px-3 py-2 w-full outline-none"
               required
             >
-              <option value="repair">Repair</option>
-              <option value="not in use">Not In Use </option>
-              <option value="in use">In Use</option>
+              <option value="repair">Reparar</option>
+              <option value="not in use">No en Uso</option>
+              <option value="in use">En Uso</option>
             </select>
           </div>
           <div>
@@ -314,7 +314,7 @@ function AddNewProductScreen() {
               htmlFor="dateOfPurchase"
               className="block text-lg font-semibold text-neutral-800 mb-1"
             >
-              Date of Purchase
+              Fecha de Compra
             </label>
             <input
               type="datetime-local"
@@ -332,14 +332,14 @@ function AddNewProductScreen() {
           className="mt-4 px-4 py-2 bg-teal-500 text-white font-semibold rounded-md hover:bg-teal-600 transition duration-300"
           disabled={isLoading}
         >
-          {isLoading ? "Adding..." : "Add Product"}
+          {isLoading ? "Agregando..." : "Agregar Producto"}
         </button>
       </form>
       <br />
-      {successMessage && <ShowSuccessMesasge  children={
+      {successMessage && <ShowSuccessMesasge children={
         <div className="text-gray-900 text-lg">{successMessage}</div>}
-  
-  />}
+
+      />}
     </div>
   );
 }

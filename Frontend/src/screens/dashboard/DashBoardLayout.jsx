@@ -49,7 +49,7 @@ function DashBoardLayout() {
       {!data && <br />}
       {!data && (
         <div className=" container mx-auto w-2/4 text-center mb-3 px-3 py-1 border-2 border-yellow-600 bg-yellow-100 rounded-md text-yellow-800">
-          Your are not authenticated please login to continue
+          Tu sesión ha expirado, por favor inicia sesión nuevamente.
         </div>
       )}
 
@@ -89,7 +89,7 @@ function DashBoardLayout() {
                 to={"auth"}
                 className="px-6 py-2 animate-pulse rounded-md text-lg  bg-blue-800"
               >
-                Login Now
+                Iniciar sesión ahora
               </Link>
             </div>
           </div>

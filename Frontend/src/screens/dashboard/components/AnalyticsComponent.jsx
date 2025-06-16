@@ -38,7 +38,7 @@ export const AnalyticsComponent = () => {
       {loading ? (
         <div className="col-span-4 flex justify-center items-center">
           <div className="spinner-border text-primary" role="status">
-            <span className="visually-hidden">Loading...</span>
+            <span className="visually-hidden">Cargando...</span>
           </div>
         </div>
       ) : (
@@ -47,8 +47,8 @@ export const AnalyticsComponent = () => {
             <h2 className="text-xl font-semibold mb-4">
               {analyticsData.useby.title}
             </h2>
-            <Pie 
-            
+            <Pie
+
               data={{
                 labels: analyticsData.useby.labels,
                 datasets: [

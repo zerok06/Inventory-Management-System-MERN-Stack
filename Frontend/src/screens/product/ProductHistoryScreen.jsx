@@ -47,7 +47,7 @@ function ProductHistoryScreen() {
     <div>
       <div className="p-5 w-full h-full">
         <div className="flex justify-between items-center">
-          <h1 className="text-2xl font-semibold">Product Information</h1>
+          <h1 className="text-2xl font-semibold">Historial de Productos</h1>
         </div>
         <br />
 
@@ -65,7 +65,7 @@ function ProductHistoryScreen() {
                   className="underline cursor-pointer"
                   onClick={getDataFromApi}
                 >
-                  reload
+                  recargar
                 </span>
               }
             />
@@ -77,15 +77,15 @@ function ProductHistoryScreen() {
             <table className="table-auto w-full border-collapse">
               <thead className="border-b text-left">
                 <tr>
-                  <th className="px-4 py-2">DETAILS</th>
-                  <th className="px-4 py-2">SERIAL NUMBER</th>
-                  <th className="px-4 py-2">USED BY</th>
+                  <th className="px-4 py-2">DETALLES</th>
+                  <th className="px-4 py-2">NÚMERO DE SERIE</th>
+                  <th className="px-4 py-2">USADO POR</th>
                   <th className="px-4 py-2">isPart</th>
                   <th className="px-4 py-2">RACKMOUNTABLE</th>
-                  <th className="px-4 py-2">DATE OF PURCHASE</th>
-                  <th className="px-4 py-2">MODEL</th>
-                  <th className="px-4 py-2">WARRANTY</th>
-                  <th className="px-4 py-2">MANUFACTURER</th>
+                  <th className="px-4 py-2">FECHA DE COMPRA</th>
+                  <th className="px-4 py-2">MODELO</th>
+                  <th className="px-4 py-2">GARANTÍA</th>
+                  <th className="px-4 py-2">FABRICANTE</th>
                 </tr>
               </thead>
               <tbody>
@@ -140,7 +140,7 @@ function ProductHistoryScreen() {
 
         <br />
         <div className="flex justify-between items-center">
-          <h1 className="text-2xl font-semibold">Product History</h1>
+          <h1 className="text-2xl font-semibold">Historial de Productos</h1>
         </div>
         <br />
 
@@ -159,16 +159,16 @@ const HistoryTable = ({ historyInformation }) => {
           <thead className="border-b text-left">
             <tr>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Location
+                Ubicación
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Description
+                Descripción
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Status
+                Estado
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Date
+                Fecha
               </th>
             </tr>
           </thead>
